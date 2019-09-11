@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{24FA90C8-3143-42F8-9EEB-E95ADCC952D2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ConsoleApp1</RootNamespace>
+    <AssemblyName>ConsoleApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Crc32C.NET, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Crc32C.NET.1.0.5.0\lib\net20\Crc32C.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="DnsClient, Version=1.2.0.0, Culture=neutral, PublicKeyToken=4574bb5573c51424, processorArchitecture=MSIL">
+      <HintPath>..\packages\DnsClient.1.2.0\lib\net45\DnsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.6.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.6.4\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.6.4\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=7.1.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAzure.Storage.7.1.2\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson, Version=2.9.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Bson.2.9.1\lib\net452\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver, Version=2.9.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.2.9.1\lib\net452\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver.Core, Version=2.9.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MongoDB.Driver.Core.2.9.1\lib\net452\MongoDB.Driver.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpCompress, Version=0.23.0.0, Culture=neutral, PublicKeyToken=afb0a02973931d96, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpCompress.0.23.0\lib\net45\SharpCompress.dll</HintPath>
+    </Reference>
+    <Reference Include="Snappy.NET, Version=1.1.1.8, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Snappy.NET.1.1.1.8\lib\net45\Snappy.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.6.4\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\EAInfo.cs" />
+    <Compile Include="Models\FromNsoVars\BldData.cs" />
+    <Compile Include="Models\FromNsoVars\ClosingInfo.cs" />
+    <Compile Include="Models\FromNsoVars\Department.cs" />
+    <Compile Include="Models\FromNsoVars\ModelBase.cs" />
+    <Compile Include="Models\FromNsoVars\P01\Age.cs" />
+    <Compile Include="Models\FromNsoVars\P01\BirthDate.cs" />
+    <Compile Include="Models\FromNsoVars\P01\BirthMonth.cs" />
+    <Compile Include="Models\FromNsoVars\P01\BirthYear.cs" />
+    <Compile Include="Models\FromNsoVars\P01\NameTitle.cs" />
+    <Compile Include="Models\FromNsoVars\P01\Person.cs" />
+    <Compile Include="Models\FromNsoVars\P01\Population.cs" />
+    <Compile Include="Models\FromNsoVars\P01\Registration.cs" />
+    <Compile Include="Models\FromNsoVars\P01\Relationship.cs" />
+    <Compile Include="Models\FromNsoVars\P01\Sex.cs" />
+    <Compile Include="Models\FromNsoVars\PumpRateModel.cs" />
+    <Compile Include="Models\FromNsoVars\ReportEaInfo.cs" />
+    <Compile Include="Models\FromNsoVars\root\BuildingSample.cs" />
+    <Compile Include="Models\FromNsoVars\root\CommunitySample.cs" />
+    <Compile Include="Models\FromNsoVars\root\EnumerationArea.cs" />
+    <Compile Include="Models\FromNsoVars\root\HouseHoldSample.cs" />
+    <Compile Include="Models\FromNsoVars\root\HouseHoldSampleSpecial.cs" />
+    <Compile Include="Models\FromNsoVars\root\Unit.cs" />
+    <Compile Include="Models\FromNsoVars\S01\Residential.cs" />
+    <Compile Include="Models\FromNsoVars\S02\Agriculture.cs" />
+    <Compile Include="Models\FromNsoVars\S02\AquaticAnimals.cs" />
+    <Compile Include="Models\FromNsoVars\S02\CrocodileFarming.cs" />
+    <Compile Include="Models\FromNsoVars\S02\Farming.cs" />
+    <Compile Include="Models\FromNsoVars\S02\FishFarming.cs" />
+    <Compile Include="Models\FromNsoVars\S02\FrogFarming.cs" />
+    <Compile Include="Models\FromNsoVars\S02\GrowingField.cs" />
+    <Compile Include="Models\FromNsoVars\S02\GrowingFieldWithNames.cs" />
+    <Compile Include="Models\FromNsoVars\S02\MixablePlantingField.cs" />
+    <Compile Include="Models\FromNsoVars\S02\MushroomField.cs" />
+    <Compile Include="Models\FromNsoVars\S02\Plant.cs" />
+    <Compile Include="Models\FromNsoVars\S02\PlantingArea.cs" />
+    <Compile Include="Models\FromNsoVars\S02\PlantingInfo.cs" />
+    <Compile Include="Models\FromNsoVars\S02\PlantItem.cs" />
+    <Compile Include="Models\FromNsoVars\S02\RicePlant.cs" />
+    <Compile Include="Models\FromNsoVars\S02\RicePlantingField.cs" />
+    <Compile Include="Models\FromNsoVars\S02\RicePlantingHarvest.cs" />
+    <Compile Include="Models\FromNsoVars\S03\Factorial.cs" />
+    <Compile Include="Models\FromNsoVars\S04\Academy.cs" />
+    <Compile Include="Models\FromNsoVars\S04\Building.cs" />
+    <Compile Include="Models\FromNsoVars\S04\Commercial.cs" />
+    <Compile Include="Models\FromNsoVars\S04\Hospital.cs" />
+    <Compile Include="Models\FromNsoVars\S04\HotelsAndResorts.cs" />
+    <Compile Include="Models\FromNsoVars\S04\OtherBuilding.cs" />
+    <Compile Include="Models\FromNsoVars\S04\Religious.cs" />
+    <Compile Include="Models\FromNsoVars\S05\Buying.cs" />
+    <Compile Include="Models\FromNsoVars\S05\GroundWater.cs" />
+    <Compile Include="Models\FromNsoVars\S05\GroundWaterQuantity.cs" />
+    <Compile Include="Models\FromNsoVars\S05\GroundWaterUsage.cs" />
+    <Compile Include="Models\FromNsoVars\S05\GroundWaterWell.cs" />
+    <Compile Include="Models\FromNsoVars\S05\Irrigation.cs" />
+    <Compile Include="Models\FromNsoVars\S05\Package.cs" />
+    <Compile Include="Models\FromNsoVars\S05\Plumbing.cs" />
+    <Compile Include="Models\FromNsoVars\S05\PlumbingInfo.cs" />
+    <Compile Include="Models\FromNsoVars\S05\PlumbingUsage.cs" />
+    <Compile Include="Models\FromNsoVars\S05\Pool.cs" />
+    <Compile Include="Models\FromNsoVars\S05\PrivateGroundWater.cs" />
+    <Compile Include="Models\FromNsoVars\S05\PublicGroundWater.cs" />
+    <Compile Include="Models\FromNsoVars\S05\Rain.cs" />
+    <Compile Include="Models\FromNsoVars\S05\RainContainer.cs" />
+    <Compile Include="Models\FromNsoVars\S05\River.cs" />
+    <Compile Include="Models\FromNsoVars\S05\WaterConsumptionUsingPump.cs" />
+    <Compile Include="Models\FromNsoVars\S05\WaterConsumptionUsingPumpBase.cs" />
+    <Compile Include="Models\FromNsoVars\S05\WaterQuantity.cs" />
+    <Compile Include="Models\FromNsoVars\S05\WaterResourceBase.cs" />
+    <Compile Include="Models\FromNsoVars\S05\WaterUsage.cs" />
+    <Compile Include="Models\FromNsoVars\S06\Disasterous.cs" />
+    <Compile Include="Models\FromNsoVars\S06\YearsDisasterous.cs" />
+    <Compile Include="Models\FromNsoVars\S11\Access.cs" />
+    <Compile Include="Models\FromNsoVars\S11\BuildingAccess.cs" />
+    <Compile Include="Models\FromNsoVars\S11\BuildingType.cs" />
+    <Compile Include="Models\FromNsoVars\S11\SubUnit.cs" />
+    <Compile Include="Models\FromNsoVars\S11\UnitAccess.cs" />
+    <Compile Include="Models\FromNsoVars\S22\CommunityWaterManagement.cs" />
+    <Compile Include="Models\FromNsoVars\S22\DetailManagementForFarming.cs" />
+    <Compile Include="Models\FromNsoVars\S22\DetailOrgWaterSupply.cs" />
+    <Compile Include="Models\FromNsoVars\S22\DetailWaterManagement.cs" />
+    <Compile Include="Models\FromNsoVars\S22\DisasterWarningMethod.cs" />
+    <Compile Include="Models\FromNsoVars\S22\DisinfectionMethod.cs" />
+    <Compile Include="Models\FromNsoVars\S22\ManagementForFarming.cs" />
+    <Compile Include="Models\FromNsoVars\S22\NaturalDisaster.cs" />
+    <Compile Include="Models\FromNsoVars\shared\Area.cs" />
+    <Compile Include="Models\FromNsoVars\shared\Comment.cs" />
+    <Compile Include="Models\FromNsoVars\shared\EnergySource.cs" />
+    <Compile Include="Models\FromNsoVars\shared\FactorialCategory.cs" />
+    <Compile Include="Models\FromNsoVars\shared\FieldShape.cs" />
+    <Compile Include="Models\FromNsoVars\shared\FieldSize.cs" />
+    <Compile Include="Models\FromNsoVars\shared\FieldSizeForCommu.cs" />
+    <Compile Include="Models\FromNsoVars\shared\HasAndCount.cs" />
+    <Compile Include="Models\FromNsoVars\shared\Location.cs" />
+    <Compile Include="Models\FromNsoVars\shared\Problem.cs" />
+    <Compile Include="Models\FromNsoVars\shared\Pump.cs" />
+    <Compile Include="Models\FromNsoVars\shared\RecordControl.cs" />
+    <Compile Include="Models\FromNsoVars\shared\RecordControlLog.cs" />
+    <Compile Include="Models\FromNsoVars\shared\RectanglePool.cs" />
+    <Compile Include="Models\FromNsoVars\shared\ServiceType.cs" />
+    <Compile Include="Models\FromNsoVars\shared\WaterActivity.cs" />
+    <Compile Include="Models\FromNsoVars\shared\WaterProblem.cs" />
+    <Compile Include="Models\FromNsoVars\shared\WaterSources.cs" />
+    <Compile Include="Models\FromNsoVars\SumBldUnt.cs" />
+    <Compile Include="Models\FromNsoVars\UntData.cs" />
+    <Compile Include="Models\FromNsoVars\WaterUsageRate.cs" />
+    <Compile Include="Models\ReportEaInfo.cs" />
+    <Compile Include="Models\Resolution.cs" />
+    <Compile Include="Models\RevertEaInfo.cs" />
+    <Compile Include="Models\SurveyData.cs" />
+    <Compile Include="Models\SurveyLog.cs" />
+    <Compile Include="Models\SurveyModels.cs" />
+    <Compile Include="Models\UploadLog.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\_RevertModels.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
